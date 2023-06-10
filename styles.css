@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+@layer base {
+  body {
+    @apply antialiased min-h-[100%] m-0 p-0 overflow-x-hidden no-scrollbar overflow-y-auto
+  }
+
+  html {
+    @apply scroll-smooth min-h-[100%] overflow-x-hidden overflow-y-auto
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold leading-7 tracking-widest text-slate-100 drop-shadow-2xl
+  }
+
+  p {
+    @apply font-medium tracking-wide leading-4 text-lg text-slate-200
+  }
+
+  li {
+    @apply cursor-pointer space-y-2
+  }
+}
